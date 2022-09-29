@@ -52,8 +52,8 @@ THIRD_PARTY_APPS = [
     'django_filters',
     'django_countries',
     'phonenumber_field'
- ]
- LOCAL_APPS = [
+]
+LOCAL_APPS = [
     'apps.common',
     'apps.users',
     'apps.profiles',
@@ -130,7 +130,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/staticfiles/'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATICFILE_DIRS = []
+MEDIA_URL = '/mediafiles/'
+MEDIA_ROOT = BASE_DIR / 'mediafiles'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
